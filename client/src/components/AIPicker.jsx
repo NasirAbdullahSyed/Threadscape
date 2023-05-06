@@ -1,8 +1,11 @@
 import React from 'react'
+import CustomButton from './CustomButton';
 
 const AIPicker = () => {
   return (
-    <div>AIPicker</div>
+    <div className='aipicker-container'>
+      COMING SOON!
+    </div>
   )
 }
 

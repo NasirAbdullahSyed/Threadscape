@@ -15,9 +15,9 @@ const Home = () => {
                     <motion.header {...slideAnimation('down')}>
                         <img src='./threejs.png' alt="logo" className="w-8 h-8 object-contain" />
                     </motion.header>
-                    <motion.div className="home-context" {...headContainerAnimation}>
+                    <motion.div className="home-content" {...headContainerAnimation}>
                         <motion.div {...headTextAnimation}>
-                            <h1 className="head-text">READY, <br className="x1:block hidden"/>SET, GO!</h1>
+                            <h1 className="head-text">READY, <br className="xl:block hidden"/>SET, GO!</h1>
                         </motion.div>
                         <motion.div {...headContentAnimation} className="flex flex-col gap-5">
                             <p className="max-w-md font-normal text-gray-600 text-base">
