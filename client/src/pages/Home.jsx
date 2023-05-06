@@ -17,7 +17,7 @@ const Home = () => {
                     </motion.header>
                     <motion.div className="home-context" {...headContainerAnimation}>
                         <motion.div {...headTextAnimation}>
-                            <h1 className="head-text">READY <br className="x1:block hidden"/>SET, GO!</h1>
+                            <h1 className="head-text">READY, <br className="x1:block hidden"/>SET, GO!</h1>
                         </motion.div>
                         <motion.div {...headContentAnimation} className="flex flex-col gap-5">
                             <p className="max-w-md font-normal text-gray-600 text-base">
