@@ -91,6 +91,13 @@ const Customizer = () => {
             setActiveEditorTab("");
         })
     }
+    const setActiveTab = ( tabName, activeTabName ) => {
+        if (activeTabName === tabName) {
+            setActiveEditorTab("");
+        } else {
+            setActiveEditorTab(tabName);
+        }
+    }
     return(
         <AnimatePresence>
             {!snap.intro && (
@@ -99,7 +106,7 @@ const Customizer = () => {
                         <div className='flex items-center min-h-screen'>
                             <div className='editortabs-container tabs'>
                                 {EditorTabs.map((tab) => (
-                                    <Tab key={tab.name} tab={tab} handleClick={() => setActiveEditorTab(tab.name)}/>
+                                    <Tab key={tab.name} tab={tab} handleClick={() => setActiveTab(tab.name, activeEditorTab)}/>
                                 ))}
                                 {generateTabContent()}
                             </div>
