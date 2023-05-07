@@ -9,6 +9,7 @@ import { downloadCanvasToImage, reader } from '../config/helpers';
 import { EditorTabs, FilterTabs, DecalTypes } from '../config/constants';
 import { fadeAnimation, slideAnimation } from '../config/motion';
 import { AIPicker, ColorPicker, CustomButton, FilePicker, Tab } from '../components';
+import { getContrastingColor } from '../config/helpers';
 
 const Customizer = () => {
     const snap = useSnapshot(state);
@@ -105,7 +106,15 @@ const Customizer = () => {
                         </div>
                     </motion.div>
                     <motion.div className='absolute z-10 top-5 right-5' {...fadeAnimation}>
-                        <CustomButton type="filled" title="Go Back" handleClick={() => state.intro = true} customStyles="w-fit px-4 py-2.5 font-bold text-sm"/>
+                        <CustomButton type="filled" title="Go Back" handleClick={() => state.intro = true} customStyles="w-fit px-4 py-2.5 font-bold text-sm button1"/>
+                    </motion.div>
+                    <motion.div className='absolute z-10 top-[50%] right-5' {...fadeAnimation}>
+                        <button className={`button2`} style={{backgroundColor: snap.color, color: getContrastingColor(snap.color)}}>
+                            <span style={{background: getContrastingColor(snap.color)}}></span>
+                            <span style={{background: getContrastingColor(snap.color)}}></span>
+                            <span style={{background: getContrastingColor(snap.color)}}></span>
+                            <span style={{background: getContrastingColor(snap.color)}}></span>{'CONTINUE>'}
+                        </button>
                     </motion.div>
                     <motion.div className='filtertabs-container' {...slideAnimation('up')}>
                         {FilterTabs.map((tab) => (

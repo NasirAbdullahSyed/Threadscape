@@ -23,7 +23,7 @@ const Home = () => {
                             <p className="max-w-md font-normal text-gray-600 text-base">
                                 Step into the fashion revolution with our cutting-edge 3D customization tool. <strong>Embrace your creativity and make a statement with your one-of-a-kind apparel.</strong>{" "} Your style, your way.
                             </p>
-                            <CustomButton type="filled" title="Customize It" handleClick={() => state.intro = false} customStyles="w-fit px-4 py-2.5 font-bold text-sm "/>
+                            <CustomButton type="filled" title="Customize It" handleClick={() => state.intro = false} customStyles="w-fit px-4 py-2.5 font-bold text-sm button1"/>
                         </motion.div>
                     </motion.div>
                 </motion.section>
